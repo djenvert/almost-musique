@@ -1,0 +1,2 @@
+2009-03-22 13:41:59 Warning: Warning (512): Method HtmlHelper::img does not exist in [CORE/cake/libs/view/helper.php, line 143]
+2009-05-10 10:46:14 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/app_controller.php, line 97]

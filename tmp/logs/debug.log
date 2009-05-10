@@ -1,0 +1,1 @@
+2009-05-09 22:01:19 Notice: Notice (8): Undefined property: ContactsController::$RequestHandler in [APP/controllers/contacts_controller.php, line 57]
