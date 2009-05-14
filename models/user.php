@@ -2,7 +2,7 @@
 class User extends AppModel {
 
 	var $name = 'User';
-	var $actsAs = array('Acl' => array('requester'));
+	var $actsAs = array('Sluggable' => array('translation' => 'utf-8'), 'Acl' => array('requester'));
 	
 	var $validate = array(
 		'first_name' => array('notempty'),

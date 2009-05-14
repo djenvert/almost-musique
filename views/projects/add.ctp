@@ -4,10 +4,11 @@
  		<legend><?php __('Add Project');?></legend>
 	<?php
 		echo $form->input('title');
-		echo $form->input('slug');
 		echo $form->input('text');
-		echo $form->input('date_start');
-		echo $form->input('date_end');
+		echo $tagging->input('tags');
+		echo $form->input('highlight');
+		echo $form->input('date_start', array('type' => 'date', 'dateFormat' => 'DMY'));
+		echo $form->input('date_end', array('type' => 'date', 'dateFormat' => 'DMY'));
 		echo $form->input('published');
 		echo $form->input('user_id');
 	?>

@@ -36,14 +36,45 @@
  */
 class AppController extends Controller {
 	
-	var $components = array('DebugKit.Toolbar', 'Auth', 'Acl');
+	var $components = array( 
+							'Acl',
+							'Auth',
+							'RequestHandler',
+							'Session',
+							'DebugKit.Toolbar'
+							);
+	var $helpers = array('Html', 'Form', 'Tagging.Tagging');
+	
+	var $persistModel = true;
 	
 	function beforeFilter() {
+		
+		$this->_setAuth();
+		
+		if (isset($this->params['admin'])) {
+			$this->layout='admin_default';
+		} else {
+			$this->loadModel('News'); 
+			$news = $this->News->find('latest');
+			$this->loadModel('Tagging.Tag'); 
+			$mainTagCloud = $this->Tag->tagCloud();
+			$this->set(compact('mainTagCloud'));
+		}
+			
+	
+	}
+	
+	function _setAuth() {
 		$this->Auth->authorize = 'actions';
-		$this->Auth->actionPath = 'controllers/';
+		// $this->Auth->actionPath = 'controllers/';
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
 		$this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login');
 		$this->Auth->loginRedirect = array('controller' => 'posts', 'action' => 'add');
+		if((empty($this->params['prefix']) || $this->params['prefix'] != 'admin') && $this->action != 'login') {
+			// $this->log('non admin : auth '.$this->name.'::'.$this->action);5
+			$this->Auth->allow($this->action);
+		}
+		
 	}
 	
 	/**

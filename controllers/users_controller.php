@@ -9,6 +9,17 @@ class UsersController extends AppController {
 	    $this->Auth->allowedActions = array('*');
 	}
 	
+	function initDB() {
+		$group =& $this->User->Group;
+		//Allow admins to everything
+		$group->id = 1;
+		$this->Acl->allow($group, 'controllers');
+		//allow managers to posts and widgets
+		$group->id = 2;
+		$this->Acl->deny($group, 'controllers');
+		$this->autoRender=false;
+}
+	
 	function login() {
 
 		}

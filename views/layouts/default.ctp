@@ -28,9 +28,12 @@
 <head>
 <?php echo $html->charset(); ?>
    <title>Almost Musique <?php echo $title_for_layout; ?></title>
-   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+	<link rel="home" href="<?php echo Router::url('/', true); ?>" title="Home page" />
+	<?php echo $javascript->link('jquery-1.3.2.min')?>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
 <?php
  	echo $html->meta('icon');
+
 	echo $scripts_for_layout;
 	// 9A94DD
 	// B4AFE6
@@ -84,16 +87,190 @@
 		margin: 0 5px;
 		
 	}
+	
+	/* Forms */
+	form {
+		clear: both;
+		margin-right: 20px;
+		padding: 0;
+		width: 80%;
+	}
 	fieldset {
-		padding:1em;
-		background-color:#0F0F16;
+		border: 1px solid #ccc;
+		margin-top: 30px;
+		padding: 16px 20px;
+	}
+	fieldset legend {
+		background:#fff;
+		color: #4D4A6F;
+		font-size: 160%;
+		font-weight: bold;
+		padding:10px 5px;
+	}
+	fieldset fieldset {
+		margin-top: 0px;
+		margin-bottom: 20px;
+		padding: 16px 10px;
+	}
+	fieldset fieldset legend {
+		font-size: 120%;
+		font-weight: normal;
+	}
+	fieldset fieldset div {
+		clear: left;
+		margin: 0 20px;
+	}
+	form div {
+		clear: both;
+		margin-bottom: 1em;
+		padding: .5em;
+		vertical-align: text-top;
+	}
+	form div.input {
+		color: #444;
+	}
+	form div.required {
+		color: #333;
+		font-weight: bold;
+	}
+	form div.submit {
+		border: 0;
+		clear: both;
+		margin-top: 10px;
+		margin-left: 140px;
 	}
 	label {
-	
+		display: block;
+		font-size: 110%;
+		padding-right: 20px;
 	}
-	input {
+	input, textarea {
+		clear: both;
+		font-size: 140%;
+		font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
+		padding: 2px;
+		width: 100%;
+	}
+	select {
+		clear: both;
+		font-size: 120%;
+		vertical-align: text-bottom;
+	}
+	select[multiple=multiple] {
+		width: 100%;
+	}
+	option {
+		font-size: 120%;
+		padding: 0 3px;
+	}
+	input[type=checkbox] {
+		clear: left;
+		float: left;
+		margin: 0px 6px 7px 2px;
+		width: auto;
+	}
+	input[type=radio] {
 		float:left;
-			}
+		width:auto;
+		margin: 0 3px 7px 0;
+	}
+	div.radio label {
+		margin: 0 0 6px 20px;
+	}
+	input[type=submit] {
+		display: inline;
+		font-size: 110%;
+		padding: 2px 5px;
+		width: auto;
+		vertical-align: bottom;
+	}
+
+	/* Notices and Errors */
+	div.message {
+		clear: both;
+		color: #900;
+		font-size: 140%;
+		font-weight: bold;
+		margin: 1em 0;
+	}
+	div.error-message {
+		clear: both;
+		color: #900;
+		font-weight: bold;
+	}
+	p.error {
+		background-color: #e32;
+		color: #fff;
+		font-family: Courier, monospace;
+		font-size: 120%;
+		line-height: 140%;
+		padding: 0.8em;
+		margin: 1em 0;
+	}
+	p.error em {
+		color: #000;
+		font-weight: normal;
+		line-height: 140%;
+	}
+	.notice {
+		background: #ffcc00;
+		color: #000;
+		display: block;
+		font-family: Courier, monospace;
+		font-size: 120%;
+		line-height: 140%;
+		padding: 0.8em;
+		margin: 1em 0;
+	}
+	.success {
+		background: green;
+		color: #fff;
+	}
+	
+	/* Paging */
+	div.paging {
+		color: #746FA6;
+		margin-bottom: 2em;
+	}
+	div.paging div.disabled {
+		color: #F5F5FC;
+		display: inline;
+	}
+	div.paging span {
+	}
+	div.paging span.current {
+		color: #000;
+	}
+	div.paging span a {
+	}
+	/* tags */
+	#tag_cloud {
+		display:inline;
+	}
+	#tag_cloud li {
+		display:inline;
+	}
+	.tag-size-7 {
+		font-size: 150%;
+	}
+	.tag-size-6 {
+		font-size: 140%;
+	}
+	.tag-size-5 {
+		font-size: 130%;
+	}
+	.tag-size-4 {
+		font-size: 120%;
+	}
+	.tag-size-3 {
+		font-size: 110%;
+	}
+	.tag-size-2 {
+		font-size: 100%;
+	}
+	.tag-size-1 {
+		font-size: 90%;
+	}
 </style>
 </head>
 <body id="body">
@@ -116,11 +293,20 @@
 		<li><strong>Almost Musique</strong> crée le lien entre le projet artistique et les médias (radio, presse, tv, web).</li>	
 		<li><strong>Almost Musique</strong> sort aussi des disques à l'occasion via sa filiale de droit luxembourgeois <strong>Almost Discos</strong>.</li>
 	</ul>
-	<a href="/contacts" title="contactez Almost Musique !">Contact</a>.</p>
+	<a href="/contacts" title="contactez Almost Musique !">Contact</a>.
+	<br />
+	<ul>
+		<li><a href="#">projets</a></li>
+		<li><a href="#">news</a></li>
+		<li><a href="#">guestlist : blog vain et lointain</a></li>
+	</ul>
+	</p>
+	<?php echo $tagging->generateCloud($mainTagCloud, array('class' => 'tag_cloud'));?>
 		</div>
 	    </div>
     <div class="yui-u">
 		<?php $session->flash(); ?>
+		<?php $session->flash('auth'); ?>
 		<?php echo $content_for_layout; ?>
 	    </div>
 </div>

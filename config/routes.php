@@ -31,7 +31,25 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/views/pages/home.ctp)...
  */
-	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
+	Router::connect('/', array('controller' => 'projects', 'action' => 'index'));
+	
+	Router::connect('/news/:id/:slug', array('controller' => 'news', 'action' => 'view'), array(
+   'pass' => array('id', 'slug'),
+   'id' => '[\d]+',
+	'slug' => '[a-zA-Z0-9_-]+'
+	));
+	
+	Router::connect('/posts/:id/:slug', array('controller' => 'posts', 'action' => 'view'), array(
+   'pass' => array('id', 'slug'),
+   'id' => '[\d]+',
+	'slug' => '[a-zA-Z0-9_-]+'
+	));
+	
+	Router::connect('/projects/:id/:slug', array('controller' => 'projects', 'action' => 'view'), array(
+   'pass' => array('id', 'slug'),
+   'id' => '[\d]+',
+	'slug' => '[a-zA-Z0-9_-]+'
+	));
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */

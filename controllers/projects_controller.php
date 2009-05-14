@@ -2,11 +2,21 @@
 class ProjectsController extends AppController {
 
 	var $name = 'Projects';
-	var $helpers = array('Html', 'Form');
-
+	var $paginate = array('limit' => 3,
+						 'page' => 1,
+						 'recursive' => 1,
+						 'conditions' => array('Projects.published_date <= NOW()'/*, 'Article.published = 1'*/),
+	// 'fields'=>array('Artist.id', 'Artist.first_name', 'Artist.last_name', 'Artist.modified', 'Artist.created', 'User.signature', 'User.id'),
+						 
+	);
 	function index() {
 		$this->Project->recursive = 0;
-		$this->set('projects', $this->paginate());
+		$this->paginate = array('limit' => 3,
+								'conditions' => array('Project.date_start <= NOW()', 'Project.published' => 1),
+								'order' => array ('Project.date_start' => 'desc', 'Project.id' => 'DESC')
+								);
+								
+		$this->set('projects', $this->paginate(null, array('published' => 1)));
 	}
 
 	function view($id = null) {
@@ -14,6 +24,7 @@ class ProjectsController extends AppController {
 			$this->flash(__('Invalid Project', true), array('action'=>'index'));
 		}
 		$this->set('project', $this->Project->read(null, $id));
+		$this->set('tags', $this->Project->findTags());
 	}
 
 	function add() {

@@ -2,6 +2,8 @@
 class Project extends AppModel {
 
 	var $name = 'Project';
+	var $actsAs = array('Tagging.Taggable', 'WhoDunnit', 'Sluggable' => array('translation' => 'utf-8'));
+	
 	var $validate = array(
 		'title' => array('notempty'),
 		'slug' => array('notempty'),

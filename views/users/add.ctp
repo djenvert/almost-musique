@@ -5,7 +5,6 @@
 	<?php
 		echo $form->input('first_name');
 		echo $form->input('last_name');
-		echo $form->input('slug');
 		echo $form->input('username');
 		echo $form->input('email');
 		echo $form->input('short_desc');
@@ -14,7 +13,6 @@
 		echo $form->input('password');
 		echo $form->input('group_id');
 		echo $form->input('signature');
-		echo $form->input('last_login');
 		echo $form->input('mobile_phone');
 	?>
 	</fieldset>
