@@ -47,7 +47,7 @@ function index() {
         $this->Contact->set($this->data);
         if ($this->Contact->validates()) {
             //send email using the Email component
-            $this->Email->to = 'silvio.lung@popnews.com';  
+            $this->Email->to = 'contact@almost-musique.com';  
             $this->Email->subject = 'Contact message from ' . $this->data['Contact']['name'];  
             $this->Email->from = $this->data['Contact']['email'];  
    

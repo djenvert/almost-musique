@@ -43,9 +43,9 @@ class AppController extends Controller {
 							'Session',
 							'DebugKit.Toolbar'
 							);
-	var $helpers = array('Html', 'Form', 'Tagging.Tagging');
+	var $helpers = array('Html', 'Form', 'Text', 'Time', 'Tagging.Tagging');
 	
-	var $persistModel = true;
+	// var $persistModel = true;
 	
 	function beforeFilter() {
 		
@@ -53,11 +53,10 @@ class AppController extends Controller {
 		
 		if (isset($this->params['admin'])) {
 			$this->layout='admin_default';
-		} else {
-			$this->loadModel('News'); 
-			$news = $this->News->find('latest');
-			$this->loadModel('Tagging.Tag'); 
-			$mainTagCloud = $this->Tag->tagCloud();
+		} elseif (!$this->RequestHandler->isAjax()) {
+			$latest_news = ClassRegistry::init('News')->find('latest');
+			$mainTagCloud = ClassRegistry::init('Tagging.Tag')->tagCloud();
+			$this->set('latest_news', $latest_news);
 			$this->set(compact('mainTagCloud'));
 		}
 			

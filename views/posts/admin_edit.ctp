@@ -1,22 +1,15 @@
 <div class="posts form">
 <?php echo $form->create('Post');?>
 	<fieldset>
- 		<legend><?php __('Edit Post');?></legend>
+ 		<legend><?php echo sprintf(__('%s %s', true), 
+		             __(ucwords($this->action), true), 
+		             __('Post', true));?></legend>
 	<?php
-		echo $form->input('id');
 		echo $form->input('title');
-		echo $form->input('slug');
-		echo $form->input('date');
-		echo $form->input('content');
-		echo $form->input('post_excerpt');
-		echo $form->input('ping_status');
-		echo $form->input('post_name');
-		echo $form->input('to_ping');
-		echo $form->input('pinged');
-		echo $form->input('guid');
-		echo $form->input('comment_count');
+		echo $form->input('date', array('type' => 'date', 'dateFormat' => 'DMY'));
+		echo $tinymce->input('content');
+		echo $tagging->input('tags');
 		echo $form->input('published');
-		echo $form->input('user_id');
 	?>
 	</fieldset>
 <?php echo $form->end('Submit');?>

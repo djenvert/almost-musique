@@ -59,6 +59,24 @@
 		color:#4D4A6F;
 		background-color: #83416D;
 	}
+	
+	.index dd {
+		padding-bottom:1em;
+	}
+	.index dl {
+		padding-top:1em;
+	}
+	
+	a {
+		background-color: #E6E4F6;
+		color:#746FA6;
+	}
+	
+	a:hover {
+		color:#272537;
+		text-decoration:none;
+	}
+	
 	#hd {
 		padding:1em;
 	}
@@ -82,10 +100,37 @@
 		padding-bottom:1em;
 		list-style-type: none;
 	}
+	
+	strong {
+		background-color:#746FA6;
+		color:#0F0F16;
+		font-weight: bold;
+		padding:1px 1px;
+	}
+	em {
+		font-style: italic;
+	}
 	#footer-menu li {
 		display: inline;
 		margin: 0 5px;
 		
+	}
+	
+	.news-widget {
+		padding:4px;
+		margin:	4px 2px 2px 4px;
+		background:#B4AFE6;
+		height:90px;
+	}
+	
+	.news-widget h3 {
+		padding-bottom:1em;
+	}
+	.news-widget h3 span.date {
+		color:#777;
+		font-weight:normal;
+		float:right;
+		font-size:0.8em;
 	}
 	
 	/* Forms */
@@ -244,11 +289,20 @@
 	div.paging span a {
 	}
 	/* tags */
-	#tag_cloud {
+	ul.tag_cloud {
+		display:inline;
+		background-color:#746FA6;
+		padding-top:3px;
+		margin:4px;
+	}
+	.tag_cloud li {
 		display:inline;
 	}
-	#tag_cloud li {
+	
+	.tag_cloud li a {
 		display:inline;
+		background-color:#746FA6;
+		color:#fff;
 	}
 	.tag-size-7 {
 		font-size: 150%;
@@ -284,7 +338,7 @@
     <div class="yui-u first">
 	<div id="cartouche">
 	<h2>Almost Musique, label et agence de promotion indépendante</h2>
-	<p>Almost Musique est une organisation pas comme les autres.
+	<p><strong>Almost Musique</strong> est une organisation pas comme les autres.
 
 	Depuis avril 2009, le fameux Benjamin Kaskera dirige le département de promotion d'artistes et d'événements.
 
@@ -296,9 +350,9 @@
 	<a href="/contacts" title="contactez Almost Musique !">Contact</a>.
 	<br />
 	<ul>
-		<li><a href="#">projets</a></li>
-		<li><a href="#">news</a></li>
-		<li><a href="#">guestlist : blog vain et lointain</a></li>
+		<li><a href="/" title="tous nos projets">projets</a></li>
+		<li><a href="/news" title="les dernières news d'Almost Musique">news</a></li>
+		<li><a href="/blog" title="le blog vain et lointain d'Almost Musique">guestlist : blog vain et lointain</a></li>
 	</ul>
 	</p>
 	<?php echo $tagging->generateCloud($mainTagCloud, array('class' => 'tag_cloud'));?>
@@ -313,20 +367,20 @@
 
 	</div>
    <div id="ft" role="contentinfo">	<div class="yui-g first"> 
- <div class="yui-u first"> 
-<h3>news</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. <a href="#">lien </a></p> 
+	<?php if (isset($latest_news)):?>
+	<?php $i=0;?>
+		<?php foreach ($latest_news as $news):?>
+	<?php $i++;?>
+ <div class="yui-u<?php echo ($i%2)?'':' first';?>"> 
+	<div class="news-widget"><h3><?php echo $html->link($news['News']['title'], 
+array ('action' => 'view', 'controller' => 'news', 'id' => $news['News']['id'], 'slug' => $news['News']['slug']), array('title' => $news['News']['title']));?><span class="date">(<?php echo $time->format('d/m/y', $news['News']['date_start'])?>)</span></h3><p><?php echo $text->truncate($news['News']['text'], 280);?> <?php echo $html->link('lien', 
+	array ('action' => 'view', 'controller' => 'news', 'id' => $news['News']['id'], 'slug' => $news['News']['slug']), array('title' => $news['News']['title']));?></p> 
+	</div> 
+	</div>
+		<?php endforeach;?>
+	<?php endif;?>
 </div> 
-<div class="yui-u"> 
-<h3>news</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. <a href="#">lien </a></p> 
-</div> 
-</div> 
-<div class="yui-g"> 
- <div class="yui-u first"> 
-<h3>news</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. <a href="#">lien </a></p> 
-</div> 
-<div class="yui-u"> 
-<h3>news</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. <a href="#">lien </a></p> 
-</div>
+
 <div><ul id="footer-menu"><li><a href="/" accesskey="1">accueil</a> | </li><li><a href="/contacts" title="Contactez Almost Musique">contact</a> | </li><li><a href="">Almost Musique sur MySpace</a> | </li><li><a href="">Almost Musique sur FaceBook</a> | </li><li><a href="">Flux RSS</a> | </li></div> 
 </div></div>
 

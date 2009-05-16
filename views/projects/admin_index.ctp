@@ -10,14 +10,10 @@ echo $paginator->counter(array(
 <tr>
 	<th><?php echo $paginator->sort('id');?></th>
 	<th><?php echo $paginator->sort('title');?></th>
-	<th><?php echo $paginator->sort('slug');?></th>
-	<th><?php echo $paginator->sort('text');?></th>
 	<th><?php echo $paginator->sort('date_start');?></th>
 	<th><?php echo $paginator->sort('date_end');?></th>
 	<th><?php echo $paginator->sort('published');?></th>
 	<th><?php echo $paginator->sort('user_id');?></th>
-	<th><?php echo $paginator->sort('created');?></th>
-	<th><?php echo $paginator->sort('modified');?></th>
 	<th class="actions"><?php __('Actions');?></th>
 </tr>
 <?php
@@ -36,28 +32,16 @@ foreach ($projects as $project):
 			<?php echo $project['Project']['title']; ?>
 		</td>
 		<td>
-			<?php echo $project['Project']['slug']; ?>
+			<?php echo $time->format('d/m/Y', $project['Project']['date_start']); ?>
 		</td>
 		<td>
-			<?php echo $project['Project']['text']; ?>
-		</td>
-		<td>
-			<?php echo $project['Project']['date_start']; ?>
-		</td>
-		<td>
-			<?php echo $project['Project']['date_end']; ?>
+			<?php echo $time->format('d/m/Y', $project['Project']['date_end']); ?>
 		</td>
 		<td>
 			<?php echo $project['Project']['published']; ?>
 		</td>
 		<td>
 			<?php echo $project['Project']['user_id']; ?>
-		</td>
-		<td>
-			<?php echo $project['Project']['created']; ?>
-		</td>
-		<td>
-			<?php echo $project['Project']['modified']; ?>
 		</td>
 		<td class="actions">
 			<?php echo $html->link(__('View', true), array('action' => 'view', $project['Project']['id'])); ?>

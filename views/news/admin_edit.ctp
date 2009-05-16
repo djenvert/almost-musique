@@ -5,13 +5,11 @@
 	<?php
 		echo $form->input('id');
 		echo $form->input('title');
-		echo $form->input('slug');
-		echo $form->input('text');
+		echo $tinymce->input('text');
 		echo $form->input('published');
-		echo $form->input('date_start');
-		echo $form->input('date_end');
-		echo $form->input('comment_count');
-		echo $form->input('user_id');
+		echo $tagging->input('tags');
+		echo $form->input('date_start', array('type' => 'date', 'dateFormat' => 'DMY'));
+		echo $form->input('date_end', array('type' => 'date', 'dateFormat' => 'DMY'));
 	?>
 	</fieldset>
 <?php echo $form->end('Submit');?>

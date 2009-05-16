@@ -11,6 +11,8 @@ class User extends AppModel {
 		'password' => array('notempty'),
 		'signature' => array('notempty')
 	);
+	
+	var	$displayField = 'username';
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 	var $hasMany = array(

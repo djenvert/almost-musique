@@ -6,7 +6,6 @@ class Project extends AppModel {
 	
 	var $validate = array(
 		'title' => array('notempty'),
-		'slug' => array('notempty'),
 		'published' => array('numeric'),
 		'user_id' => array('numeric')
 	);

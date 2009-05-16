@@ -10,20 +10,10 @@ echo $paginator->counter(array(
 <tr>
 	<th><?php echo $paginator->sort('id');?></th>
 	<th><?php echo $paginator->sort('title');?></th>
-	<th><?php echo $paginator->sort('slug');?></th>
 	<th><?php echo $paginator->sort('date');?></th>
-	<th><?php echo $paginator->sort('content');?></th>
-	<th><?php echo $paginator->sort('post_excerpt');?></th>
-	<th><?php echo $paginator->sort('ping_status');?></th>
-	<th><?php echo $paginator->sort('post_name');?></th>
-	<th><?php echo $paginator->sort('to_ping');?></th>
-	<th><?php echo $paginator->sort('pinged');?></th>
-	<th><?php echo $paginator->sort('guid');?></th>
-	<th><?php echo $paginator->sort('comment_count');?></th>
 	<th><?php echo $paginator->sort('published');?></th>
 	<th><?php echo $paginator->sort('user_id');?></th>
-	<th><?php echo $paginator->sort('created');?></th>
-	<th><?php echo $paginator->sort('modified');?></th>
+
 	<th class="actions"><?php __('Actions');?></th>
 </tr>
 <?php
@@ -42,46 +32,13 @@ foreach ($posts as $post):
 			<?php echo $post['Post']['title']; ?>
 		</td>
 		<td>
-			<?php echo $post['Post']['slug']; ?>
-		</td>
-		<td>
-			<?php echo $post['Post']['date']; ?>
-		</td>
-		<td>
-			<?php echo $post['Post']['content']; ?>
-		</td>
-		<td>
-			<?php echo $post['Post']['post_excerpt']; ?>
-		</td>
-		<td>
-			<?php echo $post['Post']['ping_status']; ?>
-		</td>
-		<td>
-			<?php echo $post['Post']['post_name']; ?>
-		</td>
-		<td>
-			<?php echo $post['Post']['to_ping']; ?>
-		</td>
-		<td>
-			<?php echo $post['Post']['pinged']; ?>
-		</td>
-		<td>
-			<?php echo $post['Post']['guid']; ?>
-		</td>
-		<td>
-			<?php echo $post['Post']['comment_count']; ?>
+			<?php echo $time->format('d/m/Y', $post['Post']['date']); ?>
 		</td>
 		<td>
 			<?php echo $post['Post']['published']; ?>
 		</td>
 		<td>
 			<?php echo $post['Post']['user_id']; ?>
-		</td>
-		<td>
-			<?php echo $post['Post']['created']; ?>
-		</td>
-		<td>
-			<?php echo $post['Post']['modified']; ?>
 		</td>
 		<td class="actions">
 			<?php echo $html->link(__('View', true), array('action' => 'view', $post['Post']['id'])); ?>

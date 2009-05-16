@@ -33,6 +33,8 @@
  */
 	Router::connect('/', array('controller' => 'projects', 'action' => 'index'));
 	
+	Router::connect('/admin/:controller/add', array('action' => 'edit', 'admin' => 'true'));
+	
 	Router::connect('/news/:id/:slug', array('controller' => 'news', 'action' => 'view'), array(
    'pass' => array('id', 'slug'),
    'id' => '[\d]+',
@@ -54,4 +56,7 @@
  * ...and connect the rest of 'Pages' controller's urls.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	
+	
+	Router::parseExtensions();
 ?>

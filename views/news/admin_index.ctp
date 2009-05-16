@@ -10,15 +10,10 @@ echo $paginator->counter(array(
 <tr>
 	<th><?php echo $paginator->sort('id');?></th>
 	<th><?php echo $paginator->sort('title');?></th>
-	<th><?php echo $paginator->sort('slug');?></th>
-	<th><?php echo $paginator->sort('text');?></th>
 	<th><?php echo $paginator->sort('published');?></th>
 	<th><?php echo $paginator->sort('date_start');?></th>
 	<th><?php echo $paginator->sort('date_end');?></th>
-	<th><?php echo $paginator->sort('comment_count');?></th>
 	<th><?php echo $paginator->sort('user_id');?></th>
-	<th><?php echo $paginator->sort('created');?></th>
-	<th><?php echo $paginator->sort('modified');?></th>
 	<th class="actions"><?php __('Actions');?></th>
 </tr>
 <?php
@@ -37,32 +32,18 @@ foreach ($news as $news):
 			<?php echo $news['News']['title']; ?>
 		</td>
 		<td>
-			<?php echo $news['News']['slug']; ?>
-		</td>
-		<td>
-			<?php echo $news['News']['text']; ?>
-		</td>
-		<td>
 			<?php echo $news['News']['published']; ?>
 		</td>
 		<td>
-			<?php echo $news['News']['date_start']; ?>
+			<?php echo $time->format('d/m/Y', $news['News']['date_start']); ?>
 		</td>
 		<td>
-			<?php echo $news['News']['date_end']; ?>
-		</td>
-		<td>
-			<?php echo $news['News']['comment_count']; ?>
+			<?php echo $time->format('d/m/Y', $news['News']['date_end']); ?>
 		</td>
 		<td>
 			<?php echo $news['News']['user_id']; ?>
 		</td>
-		<td>
-			<?php echo $news['News']['created']; ?>
-		</td>
-		<td>
-			<?php echo $news['News']['modified']; ?>
-		</td>
+
 		<td class="actions">
 			<?php echo $html->link(__('View', true), array('action' => 'view', $news['News']['id'])); ?>
 			<?php echo $html->link(__('Edit', true), array('action' => 'edit', $news['News']['id'])); ?>
