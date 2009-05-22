@@ -5,6 +5,7 @@
 		             __(ucwords($this->action), true), 
 		             __('Post', true));?></legend>
 	<?php
+		echo $form->input('id');
 		echo $form->input('title');
 		echo $form->input('date', array('type' => 'date', 'dateFormat' => 'DMY'));
 		echo $tinymce->input('content');

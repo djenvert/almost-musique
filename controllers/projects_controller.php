@@ -3,7 +3,7 @@ class ProjectsController extends AppController {
 
 	var $name = 'Projects';
 
-	var $helpers = array('Tagging.Tagging', 'tinymce');
+	var $helpers = array('Tagging.Tagging', 'tinymce', 'Media.Medium');
 	
 	function index() {
 		$this->Project->recursive = 0;
@@ -19,6 +19,7 @@ class ProjectsController extends AppController {
 		if (!$id) {
 			$this->flash(__('Invalid Project', true), array('action'=>'index'));
 		}
+		$this->Project->contain(array('Poster', 'Attachment', 'Photo'));
 		$this->set('project', $this->Project->read(null, $id));
 		$this->set('tags', $this->Project->findTags());
 		$this->set('relatedRessources', $this->Project->findRelated(false, 5));
@@ -39,14 +40,15 @@ class ProjectsController extends AppController {
 
 	function admin_edit($id = null) {
 		if (!empty($this->data)) { 
-			if ($this->Project->save($this->data)) { 
+			if ($this->Project->saveAll($this->data, array('validate' => 'first'))) { 
 		            $this->flash(__('The Project has been saved.', true), 
 		                         array('action'=>'index')); 
 		        } else { 
 		        } 
 		    } 
 		    if ($id && empty($this->data)) { 
-		        $this->data = $this->Project->read(null, $id); 
+		        $this->Project->contain(array('Poster', 'Attachment', 'Photo'));
+				$this->data = $this->Project->read(null, $id); 
 		    }
 	}
 

@@ -58,6 +58,7 @@ class AppController extends Controller {
 			$mainTagCloud = ClassRegistry::init('Tagging.Tag')->tagCloud();
 			$this->set('latest_news', $latest_news);
 			$this->set(compact('mainTagCloud'));
+			//$this->helpers[] = 'HtmlCache';
 		}
 			
 	

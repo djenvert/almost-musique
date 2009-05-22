@@ -40,5 +40,7 @@
  * $controllerPaths = array('this path to controllers', 'second full path to controllers', 'etc...');
  *
  */
+include('plugins/media/config/core.php');
+
 //EOF
 ?>

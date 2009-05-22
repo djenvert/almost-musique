@@ -67,9 +67,15 @@
 		padding-top:1em;
 	}
 	
+	#main-nav {
+		margin-top:15px;
+		padding:4px;
+		border: 2px solid #83416D;
+	}
+	
 	a {
 		background-color: #E6E4F6;
-		color:#746FA6;
+		color:#4D4A6F;
 	}
 	
 	a:hover {
@@ -112,8 +118,7 @@
 	}
 	#footer-menu li {
 		display: inline;
-		margin: 0 5px;
-		
+		margin: 0 3px;	
 	}
 	
 	.news-widget {
@@ -121,6 +126,8 @@
 		margin:	4px 2px 2px 4px;
 		background:#B4AFE6;
 		height:90px;
+		overflow: auto;
+		border: 1px solid #746FA6;
 	}
 	
 	.news-widget h3 {
@@ -325,6 +332,9 @@
 	.tag-size-1 {
 		font-size: 90%;
 	}
+	#footer {
+		margin-top:10px;
+	}
 </style>
 </head>
 <body id="body">
@@ -338,22 +348,8 @@
     <div class="yui-u first">
 	<div id="cartouche">
 	<h2>Almost Musique, label et agence de promotion indépendante</h2>
-	<p><strong>Almost Musique</strong> est une organisation pas comme les autres.
-
-	Depuis avril 2009, le fameux Benjamin Kaskera dirige le département de promotion d'artistes et d'événements.
-
-	<ul>
-		<li><strong>Almost Musique</strong> gère la promotion de sorties d'albums, concerts et festivals.</li>
-		<li><strong>Almost Musique</strong> crée le lien entre le projet artistique et les médias (radio, presse, tv, web).</li>	
-		<li><strong>Almost Musique</strong> sort aussi des disques à l'occasion via sa filiale de droit luxembourgeois <strong>Almost Discos</strong>.</li>
-	</ul>
-	<a href="/contacts" title="contactez Almost Musique !">Contact</a>.
+	<p>Renseignez-vous sur nos <a href="/" title="tous nos projets">projets</a>, nos dernières <a href="/news" title="les dernières news d'Almost Musique">news</a> et n'hésitez pas à <a href="/contacts" title="contactez Almost Musique !">nous contacter</a> ! Nous avons aussi un <a href="/posts" title="notre blog">blog vain et lointain</a>.</p>
 	<br />
-	<ul>
-		<li><a href="/" title="tous nos projets">projets</a></li>
-		<li><a href="/news" title="les dernières news d'Almost Musique">news</a></li>
-		<li><a href="/blog" title="le blog vain et lointain d'Almost Musique">guestlist : blog vain et lointain</a></li>
-	</ul>
 	</p>
 	<?php echo $tagging->generateCloud($mainTagCloud, array('class' => 'tag_cloud'));?>
 		</div>
@@ -381,10 +377,11 @@ array ('action' => 'view', 'controller' => 'news', 'id' => $news['News']['id'], 
 	<?php endif;?>
 </div> 
 
-<div><ul id="footer-menu"><li><a href="/" accesskey="1">accueil</a> | </li><li><a href="/contacts" title="Contactez Almost Musique">contact</a> | </li><li><a href="">Almost Musique sur MySpace</a> | </li><li><a href="">Almost Musique sur FaceBook</a> | </li><li><a href="">Flux RSS</a> | </li></div> 
+<div id="footer"><ul id="footer-menu"><li><a href="/" accesskey="1">accueil</a> | </li><li><a href="/contacts" title="Contactez Almost Musique">contact</a> | </li><li><a href="">Almost Musique sur MySpace</a> | </li><li><a href="">Almost Musique sur FaceBook</a> | </li><li><a href="">Flux RSS</a> | </li></div> 
 </div></div>
 
 </div>
 <?php echo $cakeDebug; ?>
+<?php echo $javascript->link('ga');?>
 </body>
 </html>

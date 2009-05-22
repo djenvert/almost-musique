@@ -3,7 +3,7 @@ class Project extends AppModel {
 
 	var $name = 'Project';
 	var $actsAs = array('Tagging.Taggable', 'WhoDunnit', 'Sluggable' => array('translation' => 'utf-8'));
-	
+
 	var $validate = array(
 		'title' => array('notempty'),
 		'published' => array('numeric'),
@@ -20,6 +20,27 @@ class Project extends AppModel {
 			'order' => ''
 		)
 	);
+	
+	var $hasMany = array(
+		'Poster' => array(
+		                    'className' => 'Media.Attachment',
+		                    'foreignKey' => 'foreign_key',
+		                    'conditions' => array('model' => 'Project', 'group' => 'poster'),
+		                    'dependent' => true,
+		                    ),
+		'Attachment' => array(
+						'className' => 'Media.Attachment',
+						'foreignKey' => 'foreign_key',
+						'conditions' => array('model' => 'Project', 'group' => 'attachment'),
+						'dependent' => true,
+				             ),
+		'Photo' => array(
+			            'className' => 'Media.Attachment',
+				                    'foreignKey' => 'foreign_key',
+				                    'conditions' => array('model' => 'Project', 'group' => 'photo'),
+				                    'dependent' => true,
+			                  ),
+	);	
 
 }
 ?>
