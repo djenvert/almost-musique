@@ -57,6 +57,7 @@
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 	
+	Router::connect('/sitemap', array('controller' => 'sitemaps', 'action' => 'sitemap')); 
 	
-	Router::parseExtensions();
+	Router::parseExtensions('xml');
 ?>
