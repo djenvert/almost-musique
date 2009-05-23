@@ -1,3 +1,5 @@
-almost-musique is a brand new musical promotion agency based in Paris, France.
+*almost-musique* is a brand new *musical promotion agency* based in Paris, France.
 
 This code is to be its website. Someday.
+
+It's based on several CakePHP developpments made by brilliant other people. See the wiki page for reference.
