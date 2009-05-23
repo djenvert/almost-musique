@@ -1,0 +1,3 @@
+almost-musique is a brand new musical promotion agency based in Paris, France.
+
+This code is to be its website. Someday.
