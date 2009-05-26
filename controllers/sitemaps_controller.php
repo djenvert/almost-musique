@@ -10,9 +10,9 @@ class SitemapsController extends AppController
     function sitemap ()
     {
         Configure::write ('debug', 0);
-        $projects = $this->Project->find('all', array('fields' => array('id', 'slug', 'modified')), null, -1);
-        $posts = $this->Post->find('all', array('fields' => array('id', 'slug', 'modified')), null, -1);
-		$news = $this->News->find('all', array('fields' => array('id', 'slug', 'modified')), null, -1);
+        $projects = $this->Project->find('all', array('fields' => array('id', 'slug', 'modified'), array('published' => 1)), null, -1);
+        $posts = $this->Post->find('all', array('fields' => array('id', 'slug', 'modified'), array('published' => 1)), null, -1);
+		$news = $this->News->find('all', array('fields' => array('id', 'slug', 'modified'), array('published' => 1)), null, -1);
         $this->set(compact('projects','posts', 'news'));
     }
 }
