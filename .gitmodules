@@ -10,3 +10,6 @@
 [submodule "plugins/debug_kit"]
 	path = plugins/debug_kit
 	url = git@thechaw.com:debug_kit.git
+[submodule "plugins/html_cache"]
+	path = plugins/html_cache
+	url = git://github.com/mcurry/html_cache.git
