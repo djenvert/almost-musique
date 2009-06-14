@@ -7,3 +7,6 @@
 [submodule "media/tagging"]
 	path = media/tagging
 	url = git@github.com:djenvert/tagging.git
+[submodule "plugins/debug_kit"]
+	path = plugins/debug_kit
+	url = git@thechaw.com:debug_kit.git
