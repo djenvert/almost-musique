@@ -16,6 +16,7 @@ set :copy_cache, true
 set :copy_cache, "/tmp/caches/myapp"
 set :copy_exclude, [".git/*", ".svn/*"]
 set :copy_compression, :gzip # Also valid are :zip and :bz2
+set :git_enable_submodules, 1
 
 namespace :deploy do
   task :start do
@@ -36,7 +37,7 @@ namespace :deploy do
     run "rm -rf #{latest_release}/tmp/models/*"
     run "rm -rf #{latest_release}/tmp/persistent/*"
     run "rm -rf #{latest_release}/tmp/cache/*"
-    run "sudo chown -R www-data:www-data #{latest_release}"
+    #run "sudo chown -R www-data:www-data #{latest_release}"
   end
   
   desc "test de sed"

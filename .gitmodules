@@ -1,3 +1,9 @@
 [submodule "plugins/contact"]
 	path = plugins/contact
 	url = git://github.com/msadouni/cakephp-contact-plugin.git
+[submodule "plugins/media"]
+	path = plugins/media
+	url = git@github.com:djenvert/media.git
+[submodule "media/tagging"]
+	path = media/tagging
+	url = git@github.com:djenvert/tagging.git
