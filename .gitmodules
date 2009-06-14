@@ -1,0 +1,6 @@
+[submodule "media"]
+	path = media
+	url = git://github.com/davidpersson/media.git
+[submodule "plugins/contact"]
+	path = plugins/contact
+	url = git://github.com/msadouni/cakephp-contact-plugin.git

@@ -22,10 +22,7 @@ set :repository, "http://svn.yourhost.com/#{application}/trunk"
 # be used to single out a specific subset of boxes in a particular role, like
 # :primary => true.
 
-role :web, "www01.example.com", "www02.example.com"
-role :app, "app01.example.com", "app02.example.com", "app03.example.com"
-role :db,  "db01.example.com", :primary => true
-role :db,  "db02.example.com", "db03.example.com"
+role :web, "v2.popnews.com"
 
 # =============================================================================
 # OPTIONAL VARIABLES

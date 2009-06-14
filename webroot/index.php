@@ -55,7 +55,7 @@
  *
  */
 	if (!defined('CAKE_CORE_INCLUDE_PATH')) {
-		define('CAKE_CORE_INCLUDE_PATH', '/Users/guillaumesautereau/Documents/workspace/popnews_v2/cake');
+		define('CAKE_CORE_INCLUDE_PATH', DS.'Users'.DS.'guillaumesautereau'.DS.'Documents'.DS.'workspace'.DS.'popnews_v2'.DS.'cake');
 	}
 
 /**

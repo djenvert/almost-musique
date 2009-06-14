@@ -129,3 +129,5 @@
 2009-06-14 08:13:47 Notice: Notice (8): Use of undefined constant MEDIA_TRANSFER_URL - assumed 'MEDIA_TRANSFER_URL' in [CORE/cake/libs/view/view.php, line 744]
 2009-06-14 08:13:47 Notice: Notice (8): Use of undefined constant MEDIA_FILTER - assumed 'MEDIA_FILTER' in [CORE/cake/libs/view/view.php, line 744]
 2009-06-14 08:13:47 Notice: Notice (8): Use of undefined constant MEDIA_FILTER_URL - assumed 'MEDIA_FILTER_URL' in [CORE/cake/libs/view/view.php, line 744]
+2009-06-14 17:03:46 Notice: Notice (8): Undefined variable: javascript in [APP/views/layouts/default.ctp, line 32]
+2009-06-14 17:37:55 Notice: Notice (8): Undefined variable: javascript in [APP/views/layouts/default.ctp, line 32]
