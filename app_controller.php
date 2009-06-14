@@ -43,7 +43,7 @@ class AppController extends Controller {
 							'Session',
 							'DebugKit.Toolbar'
 							);
-	var $helpers = array('Html', 'Form', 'Text', 'Time', 'Tagging.Tagging');
+	var $helpers = array('Html', 'Form', 'Text', 'Time', 'Tagging.Tagging', 'Media.Medium');
 	
 	// var $persistModel = true;
 	
@@ -56,7 +56,9 @@ class AppController extends Controller {
 		} elseif (!$this->RequestHandler->isAjax()) {
 			$latest_news = ClassRegistry::init('News')->find('latest');
 			$mainTagCloud = ClassRegistry::init('Tagging.Tag')->tagCloud();
+			$posters = ClassRegistry::init('Project')->find('poster');
 			$this->set('latest_news', $latest_news);
+			$this->set('posters', $posters);
 			$this->set(compact('mainTagCloud'));
 			//$this->helpers[] = 'HtmlCache';
 		}

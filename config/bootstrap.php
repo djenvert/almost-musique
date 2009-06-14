@@ -40,7 +40,7 @@
  * $controllerPaths = array('this path to controllers', 'second full path to controllers', 'etc...');
  *
  */
-include(APP.DS.'plugins/media/config/core.php');
+include(APP.'plugins/media/config/core.php');
 
 //EOF
 ?>

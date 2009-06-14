@@ -3,3 +3,6 @@
 This code is to be its website. Someday.
 
 It's based on several CakePHP developpments made by brilliant other people. See the wiki page for reference.
+
+It could be a cool and simple example of a small web site based on CakePHP.
+

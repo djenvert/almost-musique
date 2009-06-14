@@ -33,7 +33,8 @@
 	<link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
 <?php
  	echo $html->meta('icon');
-
+	echo $html->css(array('style'));
+		
 	echo $scripts_for_layout;
 	// 9A94DD
 	// B4AFE6
@@ -46,303 +47,32 @@
 	// 272537
 	// 0F0F16
 ?>
-<style type="text/css" media="screen">
-	#doc2 {
-		background-color: #CDCAEF;
-	}
-	#cartouche {
-		background-color: #9A94DD;
-		padding:2em;
-	}
-	body {
-		font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
-		color:#4D4A6F;
-		background-color: #83416D;
-	}
-	
-	.index dd {
-		padding-bottom:1em;
-	}
-	.index dl {
-		padding-top:1em;
-	}
-	
-	#main-nav {
-		margin-top:15px;
-		padding:4px;
-		border: 2px solid #83416D;
-	}
-	
-	a {
-		background-color: #E6E4F6;
-		color:#4D4A6F;
-	}
-	
-	a:hover {
-		color:#272537;
-		text-decoration:none;
-	}
-	
-	#hd {
-		padding:1em;
-	}
-	h1 {
-		font-size:3em;
-		font-weight: bold;
-	}
-	h2 {
-		font-size:1.1em;
-		font-weight: bold;
-	}
-	h3 {
-		font-size:1em;
-		font-weight: bold;
-	}
-	p {
-	padding-bottom:10px;
-	}
-	ul#footer-menu {
-		margin:0;
-		padding-bottom:1em;
-		list-style-type: none;
-	}
-	
-	strong {
-		background-color:#746FA6;
-		color:#0F0F16;
-		font-weight: bold;
-		padding:1px 1px;
-	}
-	em {
-		font-style: italic;
-	}
-	#footer-menu li {
-		display: inline;
-		margin: 0 3px;	
-	}
-	
-	.news-widget {
-		padding:4px;
-		margin:	4px 2px 2px 4px;
-		background:#B4AFE6;
-		height:90px;
-		overflow: auto;
-		border: 1px solid #746FA6;
-	}
-	
-	.news-widget h3 {
-		padding-bottom:1em;
-	}
-	.news-widget h3 span.date {
-		color:#777;
-		font-weight:normal;
-		float:right;
-		font-size:0.8em;
-	}
-	
-	/* Forms */
-	form {
-		clear: both;
-		margin-right: 20px;
-		padding: 0;
-		width: 80%;
-	}
-	fieldset {
-		border: 1px solid #ccc;
-		margin-top: 30px;
-		padding: 16px 20px;
-	}
-	fieldset legend {
-		background:#fff;
-		color: #4D4A6F;
-		font-size: 160%;
-		font-weight: bold;
-		padding:10px 5px;
-	}
-	fieldset fieldset {
-		margin-top: 0px;
-		margin-bottom: 20px;
-		padding: 16px 10px;
-	}
-	fieldset fieldset legend {
-		font-size: 120%;
-		font-weight: normal;
-	}
-	fieldset fieldset div {
-		clear: left;
-		margin: 0 20px;
-	}
-	form div {
-		clear: both;
-		margin-bottom: 1em;
-		padding: .5em;
-		vertical-align: text-top;
-	}
-	form div.input {
-		color: #444;
-	}
-	form div.required {
-		color: #333;
-		font-weight: bold;
-	}
-	form div.submit {
-		border: 0;
-		clear: both;
-		margin-top: 10px;
-		margin-left: 140px;
-	}
-	label {
-		display: block;
-		font-size: 110%;
-		padding-right: 20px;
-	}
-	input, textarea {
-		clear: both;
-		font-size: 140%;
-		font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
-		padding: 2px;
-		width: 100%;
-	}
-	select {
-		clear: both;
-		font-size: 120%;
-		vertical-align: text-bottom;
-	}
-	select[multiple=multiple] {
-		width: 100%;
-	}
-	option {
-		font-size: 120%;
-		padding: 0 3px;
-	}
-	input[type=checkbox] {
-		clear: left;
-		float: left;
-		margin: 0px 6px 7px 2px;
-		width: auto;
-	}
-	input[type=radio] {
-		float:left;
-		width:auto;
-		margin: 0 3px 7px 0;
-	}
-	div.radio label {
-		margin: 0 0 6px 20px;
-	}
-	input[type=submit] {
-		display: inline;
-		font-size: 110%;
-		padding: 2px 5px;
-		width: auto;
-		vertical-align: bottom;
-	}
 
-	/* Notices and Errors */
-	div.message {
-		clear: both;
-		color: #900;
-		font-size: 140%;
-		font-weight: bold;
-		margin: 1em 0;
-	}
-	div.error-message {
-		clear: both;
-		color: #900;
-		font-weight: bold;
-	}
-	p.error {
-		background-color: #e32;
-		color: #fff;
-		font-family: Courier, monospace;
-		font-size: 120%;
-		line-height: 140%;
-		padding: 0.8em;
-		margin: 1em 0;
-	}
-	p.error em {
-		color: #000;
-		font-weight: normal;
-		line-height: 140%;
-	}
-	.notice {
-		background: #ffcc00;
-		color: #000;
-		display: block;
-		font-family: Courier, monospace;
-		font-size: 120%;
-		line-height: 140%;
-		padding: 0.8em;
-		margin: 1em 0;
-	}
-	.success {
-		background: green;
-		color: #fff;
-	}
-	
-	/* Paging */
-	div.paging {
-		color: #746FA6;
-		margin-bottom: 2em;
-	}
-	div.paging div.disabled {
-		color: #F5F5FC;
-		display: inline;
-	}
-	div.paging span {
-	}
-	div.paging span.current {
-		color: #000;
-	}
-	div.paging span a {
-	}
-	/* tags */
-	ul.tag_cloud {
-		display:inline;
-		background-color:#746FA6;
-		padding-top:3px;
-		margin:4px;
-	}
-	.tag_cloud li {
-		display:inline;
-	}
-	
-	.tag_cloud li a {
-		display:inline;
-		background-color:#746FA6;
-		color:#fff;
-	}
-	.tag-size-7 {
-		font-size: 150%;
-	}
-	.tag-size-6 {
-		font-size: 140%;
-	}
-	.tag-size-5 {
-		font-size: 130%;
-	}
-	.tag-size-4 {
-		font-size: 120%;
-	}
-	.tag-size-3 {
-		font-size: 110%;
-	}
-	.tag-size-2 {
-		font-size: 100%;
-	}
-	.tag-size-1 {
-		font-size: 90%;
-	}
-	#footer {
-		margin-top:10px;
-	}
-</style>
 </head>
 <body id="body">
 <div id="doc2" class="yui-t7">
-   <div id="hd" role="banner"><h1>Almost Musique</h1>Label, promotion et chasse à l'ourse</div>
+   <div id="hd" role="banner">
+	<?php if ($this->here == '/'):?>
+		<h1>Almost Musique - Label, promotion et chasse à l'ourse</h1>
+	<?php else:?>
+		<?php echo $html->link($medium->embed('static/img/almost-logo-03.png'), Router::url('/'), array('title' => 'Almost Musique', 'rel' => 'home', 'escape' => false)); ?>
+	<?php endif;?>
+	</div>
    <div id="bd" role="main">
 	<div class="yui-g">
-		<?php echo $html->image('banner.jpg', array('alt' => 'Almost Musique')); ?>
+		<?php if(!empty($posters)):?>
+		<?php foreach ($posters as $poster):?>
+		<?php 
+		if((!empty($poster['Poster'])) && ($file = $medium->file($poster['Poster'][0]['dirname'].DS.$poster['Poster'][0]['basename']))) {
+			echo $html->link(			
+							$medium->embed('s/' . $poster['Poster'][0]['dirname'] . DS . $poster['Poster'][0]['basename'], array('restrict' => array('image'))),
+							array('controller' => 'projects', 'action' => 'view', 'id' => $poster['Project']['id'], 'slug' => $poster['Project']['slug']),
+							array('title' => $poster['Project']['title'], 'escape' => false)
+							);
+		}
+		?>
+		<?php endforeach;?>	
+		<?php endif;?>
 	</div>
 <div class="yui-gd">
     <div class="yui-u first">

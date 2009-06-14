@@ -40,10 +40,34 @@ class ProjectsController extends AppController {
 
 	function admin_edit($id = null) {
 		if (!empty($this->data)) { 
-			if ($this->Project->saveAll($this->data, array('validate' => 'first'))) { 
+			if ($this->Project->save($this->data)) { 
+			// if ($this->Project->save($this->data, array('validate' => 'first'))) { 
+				
 		            $this->flash(__('The Project has been saved.', true), 
 		                         array('action'=>'index')); 
 		        } else { 
+			error_log('erreur mais pourquoi ?');
+		        } 
+		    } 
+		    if ($id && empty($this->data)) { 
+				$this->data = $this->Project->read(null, $id); 
+		    }
+	}
+	/**
+	 * enable the association of images/files to a project
+	 *
+	 * @param string $id 
+	 * @return void
+	 * @author Guillaume Sautereau
+	 */
+	function admin_image_add($id = null) {
+		if (!empty($this->data)) { 
+			if ($this->Project->saveAll($this->data, array('validate' => 'first'))) { 
+				
+		            $this->flash(__('The Project has been saved with the new attachments.', true), 
+		                         array('action'=>'index')); 
+		        } else { 
+			error_log('erreur mais pourquoi ?');
 		        } 
 		    } 
 		    if ($id && empty($this->data)) { 
@@ -51,7 +75,6 @@ class ProjectsController extends AppController {
 				$this->data = $this->Project->read(null, $id); 
 		    }
 	}
-
 	function admin_delete($id = null) {
 		if (!$id) {
 			$this->flash(__('Invalid Project', true), array('action'=>'index'));

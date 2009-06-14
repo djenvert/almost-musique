@@ -1,0 +1,98 @@
+load 'deploy' if respond_to?(:namespace) # cap2 differentiator
+role :web, 'v2.popnews.com'
+ssh_options[:username] = 'guillaumesautereau'
+ssh_options[:forward_agent] = true
+
+set :scm, :git
+set :scm_verbose, false
+set :repository, '/Users/guillaumesautereau/Sites/almost-musique'
+set :branch, 'master'
+set :deploy_via, :copy
+set :use_sudo, true
+set :application, 'www.almost-musique.com'
+set :deploy_to, "/var/www/www.almost-musique.com/"
+set :copy_strategy, :deploy
+set :copy_cache, true
+set :copy_cache, "/tmp/caches/myapp"
+set :copy_exclude, [".git/*", ".svn/*"]
+set :copy_compression, :gzip # Also valid are :zip and :bz2
+
+namespace :deploy do
+  task :start do
+  end
+  
+  task :stop do
+  end
+  
+  task :restart do
+  end
+
+  desc <<-DESC
+    Symlinks shared configuration and directories into the latest release
+    Also clear persistent and model cache
+  DESC
+  task :finalize_update do
+    run "rm -rf #{latest_release}/config; ln -s #{shared_path}/app/config #{latest_release}/config"
+    run "rm -rf #{latest_release}/tmp/models/*"
+    run "rm -rf #{latest_release}/tmp/persistent/*"
+    run "rm -rf #{latest_release}/tmp/cache/*"
+    run "sudo chown -R www-data:www-data #{latest_release}"
+  end
+  
+  desc "test de sed"
+  task :test_sed do
+    run "sed \"s/define('CAKE_CORE_INCLUDE_PATH', DS.'Users'.DS.'guillaumesautereau'.DS.'Documents'.DS.'workspace'.DS.'popnews_v2'.DS.'cake');/define('CAKE_CORE_INCLUDE_PATH', DS . 'usr' . DS . 'lib' . DS . 'cake'. DS . '1.2');/\" #{latest_release}/webroot/index.php"
+  end
+  
+  desc "link upload directory"
+  task :symlink_uploads do
+    run "ln -nfs #{deploy_to}/shared/media #{release_path}/public/uploads"
+  end
+  
+  desc "set CAKE_CORE path"
+  task :set_core do
+    run "rm -rf #{latest_release}/webroot/index.php; ln -s #{shared_path}/app/webroot/index.php #{latest_release}/webroot/index.php"
+  end
+  
+  desc "create upload directory"
+  task :create_uploads_directory do
+  	run "sudo mkdir -p #{deploy_to}/shared/media"
+  end
+  after "deploy:setup","deploy:create_uploads_directory"
+  
+  desc "switch to debug mode"
+  task :debug_on do
+    run "sed -n \"s// <#{shared_path}/app/config #{latest_release}/config/core.php >#{shared_path}/app/config #{latest_release}/config/core.php"
+  end
+  
+  
+end
+
+
+
+desc <<-DESC
+  show free space on /dev/sda1
+DESC
+task :show_free_space do
+  run "df -h /"
+end
+
+desc <<-DESC
+  clear HTML cache
+DESC
+task :clear_html_cache do
+  run "find #{latest_release}/app/webroot/cache -mmin +360 | xargs rm -f"
+end
+
+namespace :tail do
+  task :default do
+    run "tail -f #{deploy_to}/logs/*.log"
+  end
+end
+
+namespace :search_libs do  
+  task :default, :hosts => "v2.popnews.com" do
+    run "ls -x1 /usr/lib | grep -i xml"
+  end
+end
+

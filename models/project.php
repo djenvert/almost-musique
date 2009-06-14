@@ -27,7 +27,7 @@ class Project extends AppModel {
 		                    'foreignKey' => 'foreign_key',
 		                    'conditions' => array('model' => 'Project', 'group' => 'poster'),
 		                    'dependent' => true,
-		                    ),
+		                  ),
 		'Attachment' => array(
 						'className' => 'Media.Attachment',
 						'foreignKey' => 'foreign_key',
@@ -41,6 +41,23 @@ class Project extends AppModel {
 				                    'dependent' => true,
 			                  ),
 	);	
+	/**
+	 * renvoie les derniers projets nantis d'un poster
+	 *
+	 * @param string $options 
+	 * @return void
+	 * @author Guillaume Sautereau
+	 */
+	function __findPoster($options) { 
+	$options = am(array('conditions' => array('highlight' => true, 'published' => true, 'date_start <= NOW()', 'date_end >= NOW()'), 
+	                      'order' => array('date_start' => 'desc'), 
+	                      'limit' => 4,
+	 					 'contain' => 'Poster'
+	                     ), $options 
+	               ); 
+	  $posters = $this->find('all', $options);	
+		return $posters;
+	}
 
 }
 ?>

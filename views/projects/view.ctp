@@ -1,12 +1,18 @@
 <div class="projects view">
 <?php
 $this->title_for_layout = $project['Project']['title'];
-pr($project);
+// pr($project);
 ?>
 <h2><?php echo $html->link($project['Project']['title'], array('action' => 'view', $project['Project']['id'], $project['Project']['slug'])); ?></h2>
-			<?php echo $project['Project']['text']; ?>
 			&nbsp;
-
+			<?php if(isset($project['Poster'])): ?>
+			<?php $poster = array_shift($project['Poster']); ?>
+			<div>
+			<?php echo $medium->embed('xl/' . $poster['dirname'] . DS . $poster['basename'], array('restrict' => array('image')));?>
+			</div>
+			<?php endif; ?>
+			<?php echo $project['Project']['text']; ?>
+			
 			<?php
 			// affichage des photos
 			if (isset($project['Photo'])) {

@@ -385,3 +385,226 @@ Aco: Tags/view in [CORE/cake/libs/controller/components/acl.php, line 239]
 2009-05-21 12:56:52 Warning: Warning (512): MediaBehavior::make - Failed to make version xxs of medium. in [APP/plugins/media/models/behaviors/media.php, line 309]
 2009-05-21 12:56:53 Warning: Warning (512): MediaBehavior::make - Failed to make version s of medium. in [APP/plugins/media/models/behaviors/media.php, line 309]
 2009-05-21 12:56:53 Warning: Warning (512): MediaBehavior::make - Failed to make version m of medium. in [APP/plugins/media/models/behaviors/media.php, line 309]
+2009-05-30 18:06:59 Warning: Warning (512): Medium::make - Instruction DocumentMedium::convert() failed. in [APP/plugins/media/vendors/medium/medium.php, line 291]
+2009-05-30 18:06:59 Warning: Warning (512): MediaBehavior::make - Failed to make version xxs of medium. in [APP/plugins/media/models/behaviors/media.php, line 309]
+2009-05-30 18:06:59 Warning: Warning (512): MediaBehavior::make - Failed to make version s of medium. in [APP/plugins/media/models/behaviors/media.php, line 309]
+2009-05-30 18:06:59 Warning: Warning (512): MediaBehavior::make - Failed to make version m of medium. in [APP/plugins/media/models/behaviors/media.php, line 309]
+2009-06-01 16:36:37 Warning: Warning (512): <span style = "color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'Tag.id' in 'where clause'</span> in [CORE/cake/libs/model/datasources/dbo_source.php, line 525]
+2009-06-01 16:36:37 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/plugins/tagging/controllers/tags_controller.php, line 96]
+2009-06-01 16:36:37 Warning: Warning (2): mysql_query() [<a href='http://php.net/function.mysql-query'>function.mysql-query</a>]: Unable to save result set in [CORE/cake/libs/model/datasources/dbo/dbo_mysql.php, line 411]
+2009-06-01 16:44:07 Warning: Warning (512): <span style = "color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'Tag.id' in 'where clause'</span> in [CORE/cake/libs/model/datasources/dbo_source.php, line 525]
+2009-06-01 16:44:07 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/plugins/tagging/controllers/tags_controller.php, line 96]
+2009-06-01 16:44:07 Warning: Warning (2): mysql_query() [<a href='http://php.net/function.mysql-query'>function.mysql-query</a>]: Unable to save result set in [CORE/cake/libs/model/datasources/dbo/dbo_mysql.php, line 411]
+2009-06-04 21:59:13 Warning: Warning (2): Missing argument 1 for MailsController::read(), called in /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/libs/object.php on line 115 and defined in [APP/plugins/newsletter/controllers/mails_controller.php, line 29]
+2009-06-04 22:00:32 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 3
+            [first_name] => Jean-Charles
+            [last_name] => Dufeu
+            [slug] => jc
+            [username] => jeancharles
+            [email] => jeancharles@almost-musique.com
+            [short_desc] => 
+            [long_desc] => 
+            [activity] => 1
+            [group_id] => 1
+            [signature] => Jean-Charles
+            [created] => 2009-05-10 20:40:54
+            [modified] => 2009-05-12 20:51:16
+            [last_login] => 2009-05-12 20:50:00
+            [mobile_phone] => 
+        )
+
+)
+
+Aco: Mails/admin_index in [CORE/cake/libs/controller/components/acl.php, line 239]
+2009-06-04 22:00:32 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/libs/controller/controller.php, line 640]
+2009-06-04 22:16:00 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/app_controller.php, line 128]
+2009-06-04 22:18:53 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 3
+            [first_name] => Jean-Charles
+            [last_name] => Dufeu
+            [slug] => jc
+            [username] => jeancharles
+            [email] => jeancharles@almost-musique.com
+            [short_desc] => 
+            [long_desc] => 
+            [activity] => 1
+            [group_id] => 1
+            [signature] => Jean-Charles
+            [created] => 2009-05-10 20:40:54
+            [modified] => 2009-05-12 20:51:16
+            [last_login] => 2009-05-12 20:50:00
+            [mobile_phone] => 
+        )
+
+)
+
+Aco: Mails/admin_index in [CORE/cake/libs/controller/components/acl.php, line 239]
+2009-06-04 22:18:53 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/libs/controller/controller.php, line 640]
+2009-06-04 22:26:18 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 3
+            [first_name] => Jean-Charles
+            [last_name] => Dufeu
+            [slug] => jc
+            [username] => jeancharles
+            [email] => jeancharles@almost-musique.com
+            [short_desc] => 
+            [long_desc] => 
+            [activity] => 1
+            [group_id] => 1
+            [signature] => Jean-Charles
+            [created] => 2009-05-10 20:40:54
+            [modified] => 2009-05-12 20:51:16
+            [last_login] => 2009-05-12 20:50:00
+            [mobile_phone] => 
+        )
+
+)
+
+Aco: Mails/admin_index in [CORE/cake/libs/controller/components/acl.php, line 239]
+2009-06-04 22:26:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/libs/controller/controller.php, line 640]
+2009-06-04 23:14:55 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 3
+            [first_name] => Jean-Charles
+            [last_name] => Dufeu
+            [slug] => jc
+            [username] => jeancharles
+            [email] => jeancharles@almost-musique.com
+            [short_desc] => 
+            [long_desc] => 
+            [activity] => 1
+            [group_id] => 1
+            [signature] => Jean-Charles
+            [created] => 2009-05-10 20:40:54
+            [modified] => 2009-05-12 20:51:16
+            [last_login] => 2009-05-12 20:50:00
+            [mobile_phone] => 
+        )
+
+)
+
+Aco: Projects/admin_image_add in [CORE/cake/libs/controller/components/acl.php, line 239]
+2009-06-04 23:14:55 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/libs/controller/controller.php, line 640]
+2009-06-04 23:18:42 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/app_controller.php, line 128]
+2009-06-04 23:44:36 Warning: Warning (512): Medium::make - Instruction DocumentMedium::convert() failed. in [APP/plugins/media/vendors/medium/medium.php, line 291]
+2009-06-04 23:44:36 Warning: Warning (512): MediaBehavior::make - Failed to make version xxs of medium. in [APP/plugins/media/models/behaviors/media.php, line 309]
+2009-06-04 23:44:36 Warning: Warning (512): MediaBehavior::make - Failed to make version s of medium. in [APP/plugins/media/models/behaviors/media.php, line 309]
+2009-06-04 23:44:36 Warning: Warning (512): MediaBehavior::make - Failed to make version m of medium. in [APP/plugins/media/models/behaviors/media.php, line 309]
+2009-06-04 23:53:49 Warning: Warning (512): <span style = "color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'Tag.id' in 'where clause'</span> in [CORE/cake/libs/model/datasources/dbo_source.php, line 525]
+2009-06-04 23:53:49 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/plugins/tagging/controllers/tags_controller.php, line 96]
+2009-06-04 23:53:49 Warning: Warning (2): mysql_query() [<a href='http://php.net/function.mysql-query'>function.mysql-query</a>]: Unable to save result set in [CORE/cake/libs/model/datasources/dbo/dbo_mysql.php, line 411]
+2009-06-04 23:54:01 Warning: Warning (512): <span style = "color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'Tag.id' in 'where clause'</span> in [CORE/cake/libs/model/datasources/dbo_source.php, line 525]
+2009-06-04 23:54:01 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/plugins/tagging/controllers/tags_controller.php, line 96]
+2009-06-05 00:02:39 Warning: Warning (512): <span style = "color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'Tag.id' in 'where clause'</span> in [CORE/cake/libs/model/datasources/dbo_source.php, line 525]
+2009-06-05 00:02:39 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/plugins/tagging/controllers/tags_controller.php, line 97]
+2009-06-05 00:02:49 Warning: Warning (512): <span style = "color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'Tag.id' in 'where clause'</span> in [CORE/cake/libs/model/datasources/dbo_source.php, line 525]
+2009-06-05 00:02:49 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/plugins/tagging/controllers/tags_controller.php, line 97]
+2009-06-05 00:03:27 Warning: Warning (512): <span style = "color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'Tag.id' in 'where clause'</span> in [CORE/cake/libs/model/datasources/dbo_source.php, line 525]
+2009-06-05 00:03:27 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/plugins/tagging/controllers/tags_controller.php, line 98]
+2009-06-05 00:04:08 Warning: Warning (512): <span style = "color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'Tag.id' in 'where clause'</span> in [CORE/cake/libs/model/datasources/dbo_source.php, line 525]
+2009-06-05 00:04:08 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/plugins/tagging/controllers/tags_controller.php, line 98]
+2009-06-05 00:04:08 Warning: Warning (2): mysql_query() [<a href='http://php.net/function.mysql-query'>function.mysql-query</a>]: Unable to save result set in [CORE/cake/libs/model/datasources/dbo/dbo_mysql.php, line 411]
+2009-06-05 00:06:19 Warning: Warning (512): <span style = "color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'latest' in 'where clause'</span> in [CORE/cake/libs/model/datasources/dbo_source.php, line 525]
+2009-06-05 00:06:19 Warning: Warning (512): <span style = "color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'Tag.id' in 'where clause'</span> in [CORE/cake/libs/model/datasources/dbo_source.php, line 525]
+2009-06-05 00:06:19 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/plugins/tagging/controllers/tags_controller.php, line 98]
+2009-06-05 00:06:19 Warning: Warning (2): mysql_query() [<a href='http://php.net/function.mysql-query'>function.mysql-query</a>]: Unable to save result set in [CORE/cake/libs/model/datasources/dbo/dbo_mysql.php, line 411]
+2009-06-05 00:06:19 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/views/layouts/default.ctp, line 380]
+2009-06-05 00:44:31 Warning: Warning (512): <span style = "color:Red;text-align:left"><b>SQL Error:</b> 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'group = 'poster')  WHERE `highlight` = 1 AND `published` = 1 AND date_start <= N' at line 1</span> in [CORE/cake/libs/model/datasources/dbo_source.php, line 525]
+2009-06-05 07:47:22 Warning: Warning (2): Invalid argument supplied for foreach() in [APP/plugins/media/models/behaviors/media.php, line 287]
+2009-06-13 13:32:39 Warning: Warning (512): Method TimeHelper::dateFormat does not exist in [CORE/cake/libs/view/helper.php, line 143]
+2009-06-14 08:05:38 Warning: Warning (2): include(./plugins/media/config/core.php) [<a href='http://php.net/function.include'>function.include</a>]: failed to open stream: No such file or directory in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:05:38 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening './plugins/media/config/core.php' for inclusion (include_path='/Users/guillaumesautereau/Documents/workspace/popnews_v2/cake:/Users/guillaumesautereau/Sites/almost-musique/:.:/Applications/MAMP/bin/php5/lib/php') in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:05:45 Warning: Warning (2): include(./plugins/media/config/core.php) [<a href='http://php.net/function.include'>function.include</a>]: failed to open stream: No such file or directory in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:05:45 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening './plugins/media/config/core.php' for inclusion (include_path='/Users/guillaumesautereau/Documents/workspace/popnews_v2/cake:/Users/guillaumesautereau/Sites/almost-musique/:.:/Applications/MAMP/bin/php5/lib/php') in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:05:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:05:45 Warning: Warning (2): include(./plugins/media/config/core.php) [<a href='http://php.net/function.include'>function.include</a>]: failed to open stream: No such file or directory in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:05:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:05:45 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening './plugins/media/config/core.php' for inclusion (include_path='/Users/guillaumesautereau/Documents/workspace/popnews_v2/cake:/Users/guillaumesautereau/Sites/almost-musique/:.:/Applications/MAMP/bin/php5/lib/php') in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:05:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:05:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:05:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:05:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:05:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:05:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:05:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 644]
+2009-06-14 08:05:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 644]
+2009-06-14 08:05:45 Warning: Warning (2): include(./plugins/media/config/core.php) [<a href='http://php.net/function.include'>function.include</a>]: failed to open stream: No such file or directory in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:05:45 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening './plugins/media/config/core.php' for inclusion (include_path='/Users/guillaumesautereau/Documents/workspace/popnews_v2/cake:/Users/guillaumesautereau/Sites/almost-musique/:.:/Applications/MAMP/bin/php5/lib/php') in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:05:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:05:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:05:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:05:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:05:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 644]
+2009-06-14 08:05:46 Warning: Warning (2): include(./plugins/media/config/core.php) [<a href='http://php.net/function.include'>function.include</a>]: failed to open stream: No such file or directory in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:05:46 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening './plugins/media/config/core.php' for inclusion (include_path='/Users/guillaumesautereau/Documents/workspace/popnews_v2/cake:/Users/guillaumesautereau/Sites/almost-musique/:.:/Applications/MAMP/bin/php5/lib/php') in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:05:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:05:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:05:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:05:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:05:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 644]
+2009-06-14 08:13:44 Warning: Warning (2): include(/plugins/media/config/core.php) [<a href='http://php.net/function.include'>function.include</a>]: failed to open stream: No such file or directory in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:13:44 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening '/plugins/media/config/core.php' for inclusion (include_path='/Users/guillaumesautereau/Documents/workspace/popnews_v2/cake:/Users/guillaumesautereau/Sites/almost-musique/:.:/Applications/MAMP/bin/php5/lib/php') in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:13:48 Warning: Warning (2): include(/plugins/media/config/core.php) [<a href='http://php.net/function.include'>function.include</a>]: failed to open stream: No such file or directory in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:13:48 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening '/plugins/media/config/core.php' for inclusion (include_path='/Users/guillaumesautereau/Documents/workspace/popnews_v2/cake:/Users/guillaumesautereau/Sites/almost-musique/:.:/Applications/MAMP/bin/php5/lib/php') in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:13:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:13:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:13:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:13:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:13:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 644]
+2009-06-14 08:13:49 Warning: Warning (2): include(/plugins/media/config/core.php) [<a href='http://php.net/function.include'>function.include</a>]: failed to open stream: No such file or directory in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:13:49 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening '/plugins/media/config/core.php' for inclusion (include_path='/Users/guillaumesautereau/Documents/workspace/popnews_v2/cake:/Users/guillaumesautereau/Sites/almost-musique/:.:/Applications/MAMP/bin/php5/lib/php') in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:13:49 Warning: Warning (2): include(/plugins/media/config/core.php) [<a href='http://php.net/function.include'>function.include</a>]: failed to open stream: No such file or directory in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:13:49 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening '/plugins/media/config/core.php' for inclusion (include_path='/Users/guillaumesautereau/Documents/workspace/popnews_v2/cake:/Users/guillaumesautereau/Sites/almost-musique/:.:/Applications/MAMP/bin/php5/lib/php') in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 644]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 644]
+2009-06-14 08:13:50 Warning: Warning (2): include(/plugins/media/config/core.php) [<a href='http://php.net/function.include'>function.include</a>]: failed to open stream: No such file or directory in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:13:50 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening '/plugins/media/config/core.php' for inclusion (include_path='/Users/guillaumesautereau/Documents/workspace/popnews_v2/cake:/Users/guillaumesautereau/Sites/almost-musique/:.:/Applications/MAMP/bin/php5/lib/php') in [APP/config/bootstrap.php, line 43]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:13:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Documents/workspace/popnews_v2/cake/cake/basics.php:111) in [CORE/cake/dispatcher.php, line 644]
+2009-06-14 08:15:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:15:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:15:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:15:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:15:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:15:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:15:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:15:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:15:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 644]
+2009-06-14 08:15:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 644]
+2009-06-14 08:15:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:15:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:15:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:15:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:15:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 644]
+2009-06-14 08:15:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 640]
+2009-06-14 08:15:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 641]
+2009-06-14 08:15:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 642]
+2009-06-14 08:15:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 643]
+2009-06-14 08:15:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/guillaumesautereau/Sites/almost-musique/config/bootstrap.php:43) in [CORE/cake/dispatcher.php, line 644]

@@ -1,5 +1,5 @@
 <div class="projects form">
-<?php echo $form->create('Project', array('type' => 'file'));?>
+<?php echo $form->create('Project');?>
 	<fieldset>
  		<legend><?php __('Edit Project');?></legend>
 	<?php
@@ -10,12 +10,7 @@
 	echo $form->input('highlight');
 	echo $form->input('date_start', array('type' => 'date', 'dateFormat' => 'DMY'));
 	echo $form->input('date_end', array('type' => 'date', 'dateFormat' => 'DMY'));
-	echo $form->input('published');
-	echo $this->element('attachments', array('plugin' => 'media', 'assocAlias' => 'Poster'));
-	echo $this->element('attachments', array('plugin' => 'media', 'assocAlias' => 'Photo'));	
-	echo $this->element('attachments', array('plugin' => 'media', 'assocAlias' => 'Attachment'));	
-	
-		
+	echo $form->input('published');	
 	?>
 	</fieldset>
 <?php echo $form->end('Submit');?>

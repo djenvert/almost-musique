@@ -45,6 +45,7 @@ foreach ($projects as $project):
 		</td>
 		<td class="actions">
 			<?php echo $html->link(__('View', true), array('action' => 'view', $project['Project']['id'])); ?>
+			<?php echo $html->link(__('Add images', true), array('action' => 'image_add', $project['Project']['id'])); ?>
 			<?php echo $html->link(__('Edit', true), array('action' => 'edit', $project['Project']['id'])); ?>
 			<?php echo $html->link(__('Delete', true), array('action' => 'delete', $project['Project']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $project['Project']['id'])); ?>
 		</td>
