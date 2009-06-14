@@ -4,8 +4,8 @@
 [submodule "plugins/media"]
 	path = plugins/media
 	url = git@github.com:djenvert/media.git
-[submodule "media/tagging"]
-	path = media/tagging
+[submodule "plugins/tagging"]
+	path = plugins/tagging
 	url = git@github.com:djenvert/tagging.git
 [submodule "plugins/debug_kit"]
 	path = plugins/debug_kit
